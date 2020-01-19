@@ -1,0 +1,206 @@
+//I have decided to build that project with 12 columns system grid
+//as in my opinion it is much more easier to make it responsve on mobiles and tablets.
+// 1. I have created a section because it is easier to manipulate with the width;
+// 2. I have created 1 row with 2 divs - 1 for image and 1 for the text
+// 3. I have created 2nd row with 1 div which contains the button
+
+@import url(https://fonts.googleapis.com/css?family=Lato&display=swap)
+$fontfamily: 'Lato', sans-serif
+$fontcolor: #2a2a2a
+$pinklight: #f14dae
+$pinkdark: #eb008b
+$white: #ffffff
+.font
+  color: $fontcolor
+  font-family: $fontfamily
+body
+  margin: 0 auto
+  max-width: 1000px
+  width: 100%
+  @extend .font
+
+//12 columns grid for large screens, to use it, please copy the whole block between the comments
+.col-1
+  width: 8.33%
+.col-2
+  width: 16.66%
+.col-3
+  width: 25%
+.col-4
+  width: 33.33%
+.col-5
+  width: 41.66%
+.col-6
+  width: 50%
+.col-7
+  width: 58.33%
+.col-8
+  width: 66.66%
+.col-9
+  width: 75%
+.col-10
+  width: 83.33%
+.col-11
+  width: 91.66%
+.col-12
+  width: 100%
+
+[class*="col-"]
+  Float: left
+  min-height: 1px
+  text-align: center
+  margin: 0
+  position: relative
+.row:before,
+.row:after
+  content: ""
+  display: table
+  clear: both
+//end of the grid system
+
+.row
+  margin-bottom: 5%
+
+.kitten
+  max-width: 700px
+  margin: 5% auto
+  .image
+    width: 36%
+    -ms-transform: rotate(-5deg)
+    -webkit-transform: rotate(-5deg)
+    transform: rotate(-5deg)
+    img
+      border-radius: 15px
+      display: block
+  .text
+    width: 100%
+    h1
+      font-size: 3rem
+      margin-top: 0
+      margin-bottom: 0
+      text-align: left
+    p
+      font-size: 1.8rem
+      width: 75%
+      text-align: left
+    hr
+      width: 200px
+      height: 5px
+      background-color: $pinkdark
+      border: none
+      text-align: left
+    .pWidth
+      width: 98%
+      margin-top: 5%
+  //button with 2 colors background and 2 borders
+  .button
+    width: 88%
+    height: 100px
+    background-color: $pinkdark
+    color: $white
+    text-align: center
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, $pinklight), color-stop(.5, $pinklight), color-stop(.51, $pinkdark))
+    background: -moz-linear-gradient(top, $pinklight, $pinklight 50%, $pinkdark 51%, $pinkdark)
+    border-radius: 12px
+    border: 4px solid $white
+    box-shadow: 0 0 0 4px $pinkdark
+    display: flex
+    align-items: center
+    &:hover
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0, $pinkdark), color-stop(.5, $pinkdark), color-stop(.51, $pinklight))
+      background: -moz-linear-gradient(top, $pinkdark, $pinkdark 50%, $pinklight 51%, $pinklight)
+    p
+      font-size: 2.5rem
+      text-align: center
+      width: 100%
+      font-weight: bold
+      display: inline-block
+      margin-block-start: 0em
+      margin-block-end: 0em
+      a
+        color: $white
+        text-decoration: none
+  //end of the button
+
+@media(min-width: 768px) and (max-width: 1199px), (max-width: 768px)
+
+@media(min-width: 479px) and (max-width: 769px)
+  //12 columns grid system for medium screens, please copy the whole block between the comments
+  .col-m-1
+    width: 8.33%
+  .col-m-2
+    width: 16.66%
+  .col-m-3
+    width: 25%
+  .col-m-4
+    width: 33.33%
+  .col-m-5
+    width: 41.66%
+  .col-m-6
+    width: 50%
+  .col-m-7
+    width: 58.33%
+  .col-m-8
+    width: 66.66%
+  .col-m-9
+    width: 75%
+  .col-m-10
+    width: 83.33%
+  .col-m-11
+    width: 91.66%
+  .col-m-12
+    width: 100%
+  //end of the grid system for medium screens
+
+  .kitten
+    width: 100%
+
+@media only screen and (max-width: 479px)
+
+  //12 columns grid system for mobile screens, please copy the whole block between the comments
+  .col-s-1
+    width: 8.33%
+  .col-s-2
+    width: 16.66%
+  .col-s-3
+    width: 25%
+  .col-s-4
+    width: 33.33%
+  .col-s-5
+    width: 41.66%
+  .col-s-6
+    width: 50%
+  .col-s-7
+    width: 58.33%
+  .col-s-8
+    width: 66.66%
+  .col-s-9
+    width: 75%
+  .col-s-10
+    width: 83.33%
+  .col-s-11
+    width: 91.66%
+  .col-s-12
+    width: 100%
+  //end of the grid system for mobile
+
+  .kitten
+    width: 100%
+    .image
+      width: 100%
+      img
+        margin: auto
+    .text
+      width: 90%
+      margin: 5% auto 1%
+      p
+        width: 98%
+        margin-top: 1%
+        font-size: 1.5rem
+      h1
+        font-size: 2rem
+        margin-top: 3%
+    .button
+      margin: auto
+      p
+        font-size: 1.5rem

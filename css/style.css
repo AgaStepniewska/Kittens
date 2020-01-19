@@ -1,0 +1,229 @@
+/* I have decided to build that project with 12 columns system grid
+as in my opinion it is much more easier to make it responsve on mobiles and tablets.
+1. I have created a section containing all of the content (image, copy and a button) because it is easier to manipulate with the width;
+2. I have created 1 row with 2 divs - 1 for image and 1 for the text
+3. I have created 2nd row with 1 div which contains the button */
+
+@import url(https://fonts.googleapis.com/css?family=Lato&display=swap);
+.font, body {
+  color: #2a2a2a;
+  font-family: "Lato", sans-serif; }
+
+body {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%; }
+/* 12 columns grid for large screens, to use it, please copy the whole block between the comments */
+.col-1 {
+  width: 8.33%; }
+
+.col-2 {
+  width: 16.66%; }
+
+.col-3 {
+  width: 25%; }
+
+.col-4 {
+  width: 33.33%; }
+
+.col-5 {
+  width: 41.66%; }
+
+.col-6 {
+  width: 50%; }
+
+.col-7 {
+  width: 58.33%; }
+
+.col-8 {
+  width: 66.66%; }
+
+.col-9 {
+  width: 75%; }
+
+.col-10 {
+  width: 83.33%; }
+
+.col-11 {
+  width: 91.66%; }
+
+.col-12 {
+  width: 100%; }
+
+[class*="col-"] {
+  Float: left;
+  min-height: 1px;
+  text-align: center;
+  margin: 0;
+  position: relative; }
+
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+  clear: both; }
+/* end of the grid system */
+.row {
+  margin-bottom: 5%; }
+
+.kitten {
+  max-width: 700px;
+  margin: 5% auto; }
+  .kitten .image {
+    width: 36%;
+    -ms-transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg); }
+    .kitten .image img {
+      border-radius: 15px;
+      display: block; }
+  .kitten .text {
+    width: 100%; }
+    .kitten .text h1 {
+      font-size: 3rem;
+      margin-top: 0;
+      margin-bottom: 0;
+      text-align: left; }
+    .kitten .text p {
+      font-size: 1.8rem;
+      width: 75%;
+      text-align: left; }
+    .kitten .text hr {
+      width: 200px;
+      height: 5px;
+      background-color: #eb008b;
+      border: none;
+      text-align: left; }
+    .kitten .text .pWidth {
+      width: 98%;
+      margin-top: 5%; }
+  /* button with 2 colors background and 2 borders */
+  .kitten .button {
+    width: 88%;
+    height: 100px;
+    background-color: #eb008b;
+    color: #ffffff;
+    text-align: center;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f14dae), color-stop(0.5, #f14dae), color-stop(0.51, #eb008b));
+    background: -moz-linear-gradient(top, #f14dae, #f14dae 50%, #eb008b 51%, #eb008b);
+    border-radius: 12px;
+    border: 4px solid #ffffff;
+    box-shadow: 0 0 0 4px #eb008b;
+    display: flex;
+    align-items: center; }
+    .kitten .button:hover {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #eb008b), color-stop(0.5, #eb008b), color-stop(0.51, #f14dae));
+      background: -moz-linear-gradient(top, #eb008b, #eb008b 50%, #f14dae 51%, #f14dae); }
+    .kitten .button p {
+      font-size: 2.5rem;
+      text-align: center;
+      width: 100%;
+      font-weight: bold;
+      display: inline-block;
+      margin-block-start: 0em;
+      margin-block-end: 0em; }
+      .kitten .button p a {
+        color: #ffffff;
+        text-decoration: none; }
+/* end of the button */
+@media(min-width: 768px) and (max-width: 1199px), (max-width: 768px);
+@media(min-width: 479px) and (max-width: 769px) {
+/* 12 columns grid system for medium screens, please copy the whole block between the comments */
+  .col-m-1 {
+    width: 8.33%; }
+
+  .col-m-2 {
+    width: 16.66%; }
+
+  .col-m-3 {
+    width: 25%; }
+
+  .col-m-4 {
+    width: 33.33%; }
+
+  .col-m-5 {
+    width: 41.66%; }
+
+  .col-m-6 {
+    width: 50%; }
+
+  .col-m-7 {
+    width: 58.33%; }
+
+  .col-m-8 {
+    width: 66.66%; }
+
+  .col-m-9 {
+    width: 75%; }
+
+  .col-m-10 {
+    width: 83.33%; }
+
+  .col-m-11 {
+    width: 91.66%; }
+
+  .col-m-12 {
+    width: 100%; }
+/* end of the grid system for medium screens */
+  .kitten {
+    width: 100%; } }
+@media only screen and (max-width: 479px) {
+/* 12 columns grid system for mobile screens, please copy the whole block between the comments */
+  .col-s-1 {
+    width: 8.33%; }
+
+  .col-s-2 {
+    width: 16.66%; }
+
+  .col-s-3 {
+    width: 25%; }
+
+  .col-s-4 {
+    width: 33.33%; }
+
+  .col-s-5 {
+    width: 41.66%; }
+
+  .col-s-6 {
+    width: 50%; }
+
+  .col-s-7 {
+    width: 58.33%; }
+
+  .col-s-8 {
+    width: 66.66%; }
+
+  .col-s-9 {
+    width: 75%; }
+
+  .col-s-10 {
+    width: 83.33%; }
+
+  .col-s-11 {
+    width: 91.66%; }
+
+  .col-s-12 {
+    width: 100%; }
+/* end of the grid system for mobile */
+  .kitten {
+    width: 100%; }
+    .kitten .image {
+      width: 100%; }
+      .kitten .image img {
+        margin: auto; }
+    .kitten .text {
+      width: 90%;
+      margin: 5% auto 1%; }
+      .kitten .text p {
+        width: 98%;
+        margin-top: 1%;
+        font-size: 1.5rem; }
+      .kitten .text h1 {
+        font-size: 2rem;
+        margin-top: 3%; }
+    .kitten .button {
+      margin: auto; }
+      .kitten .button p {
+        font-size: 1.5rem; } }
+
+/*# sourceMappingURL=style.css.map */
