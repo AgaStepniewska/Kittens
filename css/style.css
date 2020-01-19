@@ -1,9 +1,3 @@
-/* I have decided to build that project with 12 columns system grid
-as in my opinion it is much more easier to make it responsve on mobiles and tablets.
-1. I have created a section containing all of the content (image, copy and a button) because it is easier to manipulate with the width;
-2. I have created 1 row with 2 divs - 1 for image and 1 for the text
-3. I have created 2nd row with 1 div which contains the button */
-
 @import url(https://fonts.googleapis.com/css?family=Lato&display=swap);
 .font, body {
   color: #2a2a2a;
@@ -13,7 +7,7 @@ body {
   margin: 0 auto;
   max-width: 1000px;
   width: 100%; }
-/* 12 columns grid for large screens, to use it, please copy the whole block between the comments */
+
 .col-1 {
   width: 8.33%; }
 
@@ -62,7 +56,7 @@ body {
   content: "";
   display: table;
   clear: both; }
-/* end of the grid system */
+
 .row {
   margin-bottom: 5%; }
 
@@ -74,6 +68,10 @@ body {
     -ms-transform: rotate(-5deg);
     -webkit-transform: rotate(-5deg);
     transform: rotate(-5deg); }
+    .kitten .image:hover {
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg); }
     .kitten .image img {
       border-radius: 15px;
       display: block; }
@@ -97,7 +95,6 @@ body {
     .kitten .text .pWidth {
       width: 98%;
       margin-top: 5%; }
-  /* button with 2 colors background and 2 borders */
   .kitten .button {
     width: 88%;
     height: 100px;
@@ -125,10 +122,9 @@ body {
       .kitten .button p a {
         color: #ffffff;
         text-decoration: none; }
-/* end of the button */
+
 @media(min-width: 768px) and (max-width: 1199px), (max-width: 768px);
 @media(min-width: 479px) and (max-width: 769px) {
-/* 12 columns grid system for medium screens, please copy the whole block between the comments */
   .col-m-1 {
     width: 8.33%; }
 
@@ -164,11 +160,10 @@ body {
 
   .col-m-12 {
     width: 100%; }
-/* end of the grid system for medium screens */
+
   .kitten {
     width: 100%; } }
 @media only screen and (max-width: 479px) {
-/* 12 columns grid system for mobile screens, please copy the whole block between the comments */
   .col-s-1 {
     width: 8.33%; }
 
@@ -204,7 +199,7 @@ body {
 
   .col-s-12 {
     width: 100%; }
-/* end of the grid system for mobile */
+
   .kitten {
     width: 100%; }
     .kitten .image {
